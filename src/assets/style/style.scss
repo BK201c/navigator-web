@@ -1,0 +1,48 @@
+
+.nav {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-list {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    flex-wrap: wrap;
+    &-item {
+      width: 240px;
+      height: 210px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      .container {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        padding: 10px 15px 0px 15px;
+        border-radius: 15px;
+        transition: all 0.2s ease;
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 0 8px 3px #d5d5d5;
+          padding: 10px 15px 10px 15px;
+          & > .title {
+            transform: scale(1);
+          }
+        }
+      }
+      .icon {
+        width: 80px;
+      }
+      .title {
+        transition: all 0.3s ease;
+        transform: scale(0);
+        color: #d5d5d5;
+      }
+    }
+  }
+}

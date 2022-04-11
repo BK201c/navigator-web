@@ -1,0 +1,122 @@
+[
+  {
+    "title": {
+      "name": "docker",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Qbit",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Sonarr",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Overseerr",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Emby",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Plex",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Jacket",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "qbitorrent",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "",
+      "external": ""
+    }
+  }
+]

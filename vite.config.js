@@ -4,6 +4,7 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  assetsInclude: ["**/*.json", "**/*.png"],
   // 打包配置
   build: {
     target: "modules",
