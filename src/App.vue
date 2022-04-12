@@ -5,7 +5,7 @@
         <div class="container">
           <img
             class="icon"
-            :src="getImageUrl(item.icon.name)"
+            :src="getIconUrl(item.icon.name)"
             :alt="item.title.name"
           />
           <span class="title">{{ item.title.name }}</span>
@@ -16,16 +16,28 @@
 </template>
 
 <script setup>
+import { onBeforeMount, ref } from "vue";
+const navlist = ref("");
+const isLocal = ref(true);
+
+//点击跳转
 const goto = (val) => {
-  const newUrl = val.href.local;
+  const newUrl = isLocal.value ? val.href.local : val.href.external;
   window.open(newUrl, "_blank");
 };
 
-const navlist = await fetch("/data/data.json").then((response) =>
-  response.json()
-);
+//获取图标路径
+const getIconUrl = (name) =>
+  new URL(`/data/icons/${name}`, import.meta.url).href;
 
-console.log(navlist);
+//获取nav列表
+const getnav = async () => {
+  navlist.value = await fetch("/data/data.json").then((response) =>
+    response.json()
+  );
+};
 
-const getImageUrl = (name) => new URL(`/icons/${name}`, import.meta.url).href;
+onBeforeMount(() => {
+  getnav();
+});
 </script>
