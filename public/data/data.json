@@ -1,7 +1,7 @@
 [
   {
     "title": {
-      "name": "docker",
+      "name": "DSM",
       "size": "",
       "color": "#fff"
     },
@@ -10,13 +10,13 @@
       "size": "80px"
     },
     "href": {
-      "local": "",
+      "local": "http://192.168.2.115:2012",
       "external": ""
     }
   },
   {
     "title": {
-      "name": "Qbit",
+      "name": "Router",
       "size": "",
       "color": "#fff"
     },
@@ -25,7 +25,22 @@
       "size": "80px"
     },
     "href": {
-      "local": "",
+      "local": "http://192.168.2.115:2012",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Qbitorrent",
+      "size": "",
+      "color": "#fff"
+    },
+    "icon": {
+      "name": "logo.png",
+      "size": "80px"
+    },
+    "href": {
+      "local": "http://192.168.2.115:30021",
       "external": ""
     }
   },
@@ -40,7 +55,7 @@
       "size": "80px"
     },
     "href": {
-      "local": "",
+      "local": "http://192.168.2.115:8989",
       "external": ""
     }
   },
@@ -55,7 +70,7 @@
       "size": "80px"
     },
     "href": {
-      "local": "",
+      "local": "http://192.168.2.115:5055",
       "external": ""
     }
   },
@@ -70,14 +85,14 @@
       "size": "80px"
     },
     "href": {
-      "local": "",
+      "local": "https://umr.myds.me:8920",
       "external": ""
     }
   },
   {
     "title": {
       "name": "Plex",
-      "size": "",
+      "size": "http://192.168.2.115:32400",
       "color": "#fff"
     },
     "icon": {
@@ -92,7 +107,7 @@
   {
     "title": {
       "name": "Jacket",
-      "size": "",
+      "size": "http://192.168.2.115:2012",
       "color": "#fff"
     },
     "icon": {
@@ -100,22 +115,7 @@
       "size": "80px"
     },
     "href": {
-      "local": "",
-      "external": ""
-    }
-  },
-  {
-    "title": {
-      "name": "qbitorrent",
-      "size": "",
-      "color": "#fff"
-    },
-    "icon": {
-      "name": "logo.png",
-      "size": "80px"
-    },
-    "href": {
-      "local": "",
+      "local": "http://192.168.2.115:2012",
       "external": ""
     }
   }

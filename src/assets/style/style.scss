@@ -4,7 +4,14 @@
   align-content: center;
   justify-items: center;
 }
-
+%animate{
+  transition: all 0.2s ease;
+}
+#app{
+  background-image: url("/data/image/bg.jpg");
+  background-size: cover;
+  height: 100vh;
+}
 .nav {
   position: absolute;
   width: 100vw;
@@ -12,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0,0,0, 0.3);
   &-list {
     display: flex;
     align-items: center;
@@ -33,23 +41,26 @@
         @extend %grid;
         padding: 10px 15px 0px 15px;
         border-radius: 15px;
-        transition: all 0.2s ease;
+        @extend %animate;
         &:hover {
           cursor: pointer;
-          box-shadow: 0 0 8px 3px #d5d5d5;
           padding: 10px 15px 10px 15px;
           & > .title {
             transform: scale(1);
           }
+          & > .icon{
+            width: 80px;
+          }
         }
       }
       .icon {
-        width: 80px;
+        @extend %animate;
+        width: 60px;
       }
       .title {
         transition: all 0.3s ease;
         transform: scale(0);
-        color: #625e5e;
+        color: #fff;
       }
     }
   }
