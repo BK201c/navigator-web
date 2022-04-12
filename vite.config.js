@@ -1,11 +1,18 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import inject from "@rollup/plugin-inject";
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
   return defineConfig({
-    plugins: [vue(), vueJsx()],
+    plugins: [
+      vue(),
+      vueJsx(),
+      inject({
+        particlesJS: "particles.js",
+      }),
+    ],
     assetsInclude: ["**/*.json", "**/*.png"],
     // 打包配置
     build: {

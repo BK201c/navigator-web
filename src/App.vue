@@ -1,5 +1,5 @@
 <template>
-  <section class="nav">
+  <section class="nav" id="particles">
     <ul class="nav-list">
       <li class="nav-list-item" v-for="item in navlist" @click="goto(item)">
         <div class="container">
@@ -7,8 +7,11 @@
             class="icon"
             :src="getIconUrl(item.icon.name)"
             :alt="item.title.name"
+            :style="{ ...item.icon.style }"
           />
-          <span class="title">{{ item.title.name }}</span>
+          <span class="title" :style="{ ...item.title.style }">{{
+            item.title.name
+          }}</span>
         </div>
       </li>
     </ul>
@@ -16,7 +19,7 @@
 </template>
 
 <script setup>
-import { onBeforeMount, ref } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 const navlist = ref("");
 const isLocal = ref(true);
 
@@ -39,5 +42,10 @@ const getnav = async () => {
 
 onBeforeMount(() => {
   getnav();
+});
+onMounted(() => {
+  particlesJS.load("particles", "./assets/particles.json", function () {
+    console.log("callback - particles.js config loaded");
+  });
 });
 </script>

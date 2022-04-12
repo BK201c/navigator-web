@@ -2,12 +2,15 @@
   {
     "title": {
       "name": "DSM",
-      "size": "",
-      "color": "#fff"
+      "style": {
+        "color": "#fff"
+      }
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "dsm.png",
+      "style": {
+        "width": "60px"
+      }
     },
     "href": {
       "local": "http://192.168.2.115:2012",
@@ -16,28 +19,22 @@
   },
   {
     "title": {
-      "name": "Router",
-      "size": "",
-      "color": "#fff"
+      "name": "Router"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "router.png"
     },
     "href": {
-      "local": "http://192.168.2.115:2012",
+      "local": "http://192.168.2.1",
       "external": ""
     }
   },
   {
     "title": {
-      "name": "Qbitorrent",
-      "size": "",
-      "color": "#fff"
+      "name": "Qbittorrent"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "download.webp"
     },
     "href": {
       "local": "http://192.168.2.115:30021",
@@ -46,13 +43,10 @@
   },
   {
     "title": {
-      "name": "Sonarr",
-      "size": "",
-      "color": "#fff"
+      "name": "Sonarr"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "sonarr.png"
     },
     "href": {
       "local": "http://192.168.2.115:8989",
@@ -61,13 +55,22 @@
   },
   {
     "title": {
-      "name": "Overseerr",
-      "size": "",
-      "color": "#fff"
+      "name": "Radarr"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "radarr.png"
+    },
+    "href": {
+      "local": "http://192.168.2.115:8989",
+      "external": ""
+    }
+  },
+  {
+    "title": {
+      "name": "Overseerr"
+    },
+    "icon": {
+      "name": "overseerr.png"
     },
     "href": {
       "local": "http://192.168.2.115:5055",
@@ -76,13 +79,10 @@
   },
   {
     "title": {
-      "name": "Emby",
-      "size": "",
-      "color": "#fff"
+      "name": "Emby"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "emby.png"
     },
     "href": {
       "local": "https://umr.myds.me:8920",
@@ -92,30 +92,26 @@
   {
     "title": {
       "name": "Plex",
-      "size": "http://192.168.2.115:32400",
       "color": "#fff"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "plex.webp"
     },
     "href": {
-      "local": "",
+      "local": "http://192.168.2.115:32400",
       "external": ""
     }
   },
   {
     "title": {
-      "name": "Jacket",
-      "size": "http://192.168.2.115:2012",
+      "name": "Jackett",
       "color": "#fff"
     },
     "icon": {
-      "name": "logo.png",
-      "size": "80px"
+      "name": "jackett.png"
     },
     "href": {
-      "local": "http://192.168.2.115:2012",
+      "local": "http://192.168.2.115:9117",
       "external": ""
     }
   }
