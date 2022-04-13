@@ -1,7 +1,7 @@
 <template>
-  <section class="nav" id="tsparticles">
+  <section class="nav" id="tsparticles" :style="{ ...config.background.style }">
     <ul class="nav-list">
-      <li class="nav-list-item" v-for="item in navlist">
+      <li class="nav-list-item" v-for="item in config.list.data">
         <div class="container" @click="goto(item)">
           <img
             class="icon"
@@ -21,7 +21,7 @@
 <script setup>
 import { onBeforeMount, onMounted, ref } from "vue";
 import { tsParticles } from "tsparticles";
-const navlist = ref("");
+const config = ref("");
 const isLocal = ref(true);
 
 //点击跳转
@@ -36,7 +36,7 @@ const getIconUrl = (name) =>
 
 //获取nav列表
 const getnav = async () => {
-  navlist.value = await fetch("/data/list.json").then((response) =>
+  config.value = await fetch("/data/config.json").then((response) =>
     response.json()
   );
 };

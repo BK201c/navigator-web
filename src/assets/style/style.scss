@@ -44,10 +44,11 @@
     width: 80%;
     grid-template-columns: repeat(auto-fill, calc(80% / 5));
     grid-auto-flow: row;
+    row-gap: 30px;
     &-item {
       @extend %grid;
       @extend %animate;
-      padding:30px 0;
+      height:120px;
       .container {
         @extend %grid;
         @extend %animate;
@@ -56,7 +57,7 @@
           cursor: pointer;
           & > .title {
             transform: translateY(5px);
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
           }
           & > .icon{
@@ -72,7 +73,6 @@
         border-radius: 15px;
         box-shadow: 0 0 2px 1px #33333317;
         background: hsla(0, 0%, 97%, .75);
-        // backdrop-filter: blur(5px);    
       }
       .title {
         @extend %animate;

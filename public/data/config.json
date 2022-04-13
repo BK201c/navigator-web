@@ -1,0 +1,142 @@
+{
+  "title": "",
+  "background": {
+    "style": {
+      "background-color": "rgba(0,0,0, 0.3)"
+    }
+  },
+  "list": {
+    "setting": {},
+    "data": [
+      {
+        "title": {
+          "name": "DSM",
+          "style": {
+            "color": "#fff"
+          }
+        },
+        "icon": {
+          "name": "dsm",
+          "style": {
+            "width": "50px"
+          }
+        },
+        "href": {
+          "local": "http://192.168.2.115:2012",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Router"
+        },
+        "icon": {
+          "name": "router"
+        },
+        "href": {
+          "local": "http://192.168.2.1",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Qbittorrent"
+        },
+        "icon": {
+          "name": "download"
+        },
+        "href": {
+          "local": "http://192.168.2.115:30021",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Sonarr"
+        },
+        "icon": {
+          "name": "sonarr"
+        },
+        "href": {
+          "local": "http://192.168.2.115:8989",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Radarr"
+        },
+        "icon": {
+          "name": "radarr"
+        },
+        "href": {
+          "local": "http://192.168.2.115:8989",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Overseerr"
+        },
+        "icon": {
+          "name": "overseerr"
+        },
+        "href": {
+          "local": "http://192.168.2.115:5055",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Emby"
+        },
+        "icon": {
+          "name": "emby"
+        },
+        "href": {
+          "local": "https://umr.myds.me:8920",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Plex",
+          "color": "#fff"
+        },
+        "icon": {
+          "name": "plex"
+        },
+        "href": {
+          "local": "http://192.168.2.115:32400",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Jackett",
+          "color": "#fff"
+        },
+        "icon": {
+          "name": "jackett"
+        },
+        "href": {
+          "local": "http://192.168.2.115:9117",
+          "external": ""
+        }
+      },
+      {
+        "title": {
+          "name": "Findersub",
+          "color": "#fff"
+        },
+        "icon": {
+          "name": "findersub"
+        },
+        "href": {
+          "local": "http://192.168.2.115:9117",
+          "external": ""
+        }
+      }
+    ]
+  }
+}
