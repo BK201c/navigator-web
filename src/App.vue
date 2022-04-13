@@ -1,5 +1,5 @@
 <template>
-  <section class="nav" id="particles">
+  <section class="nav" id="tsparticles">
     <ul class="nav-list">
       <li class="nav-list-item" v-for="item in navlist" @click="goto(item)">
         <div class="container">
@@ -20,6 +20,7 @@
 
 <script setup>
 import { onBeforeMount, onMounted, ref } from "vue";
+import { tsParticles } from "tsparticles";
 const navlist = ref("");
 const isLocal = ref(true);
 
@@ -31,21 +32,26 @@ const goto = (val) => {
 
 //获取图标路径
 const getIconUrl = (name) =>
-  new URL(`/data/icons/${name}`, import.meta.url).href;
+  new URL(`./assets/icons/${name}.png`, import.meta.url).href;
 
 //获取nav列表
 const getnav = async () => {
-  navlist.value = await fetch("/data/data.json").then((response) =>
-    response.json()
-  );
+  navlist.value = await fetch("/data.json").then((response) => response.json());
 };
 
 onBeforeMount(() => {
   getnav();
+  console.log(import.meta.env.BASE_URL);
 });
+
 onMounted(() => {
-  particlesJS.load("particles", "./assets/particles.json", function () {
-    console.log("callback - particles.js config loaded");
-  });
+  tsParticles
+    .loadJSON("tsparticles", "/particles.json")
+    .then((container) => {
+      console.log("callback - tsparticles config loaded");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 });
 </script>

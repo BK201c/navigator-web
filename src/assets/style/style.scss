@@ -8,7 +8,7 @@
   transition: all 0.2s ease;
 }
 #app{
-  background-image: url("/data/image/bg.jpg");
+  background-image: url("/image/bg.jpg");
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -37,6 +37,8 @@
     align-items: center;
     width: 1200px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 99;
     &-item {
       width: 200px;
       height: 200px;
@@ -66,7 +68,7 @@
         background-color: rgb(255 255 255 / 25%);
         padding: 10px;
         box-sizing: content-box;
-        border-radius: 20px;
+        border-radius: 15px;
         box-shadow: 0 0 2px 1px #33333317;
       }
       .title {
