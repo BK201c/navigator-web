@@ -1,8 +1,8 @@
 <template>
   <section class="nav" id="tsparticles">
     <ul class="nav-list">
-      <li class="nav-list-item" v-for="item in navlist" @click="goto(item)">
-        <div class="container">
+      <li class="nav-list-item" v-for="item in navlist">
+        <div class="container" @click="goto(item)">
           <img
             class="icon"
             :src="getIconUrl(item.icon.name)"
