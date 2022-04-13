@@ -5,6 +5,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
   return defineConfig({
+    base: "/navigator/",
     plugins: [vue(), vueJsx()],
     assetsInclude: ["**/*.png"],
     // 打包配置

@@ -36,7 +36,9 @@ const getIconUrl = (name) =>
 
 //获取nav列表
 const getnav = async () => {
-  navlist.value = await fetch("/data.json").then((response) => response.json());
+  navlist.value = await fetch("/data/list.json").then((response) =>
+    response.json()
+  );
 };
 
 onBeforeMount(() => {
@@ -46,7 +48,7 @@ onBeforeMount(() => {
 
 onMounted(() => {
   tsParticles
-    .loadJSON("tsparticles", "/particles.json")
+    .loadJSON("tsparticles", "/data/particles.json")
     .then((container) => {
       console.log("callback - tsparticles config loaded");
     })

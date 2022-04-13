@@ -33,38 +33,37 @@
   align-items: center;
   background-color: rgba(0,0,0, 0.3);
   &-list {
-    display: flex;
-    align-items: center;
-    width: 1200px;
-    flex-wrap: wrap;
     position: relative;
     z-index: 99;
+    display: grid;
+    width: 1200px;
+    grid-template-columns: repeat(auto-fill, 210px);
+    grid-auto-flow: row;
     &-item {
-      width: 200px;
-      height: 200px;
       @extend %grid;
       @extend %animate;
       
       .container {
         @extend %grid;
-        padding: 10px 15px 0px 15px;
+        width:120px;
+        height:120px;
         @extend %animate;
         &:hover {
           cursor: pointer;
           padding: 10px 15px 10px 15px;
           & > .title {
-            // transform: scale(1) translateY(10px);
+            transform: translateY(5px);
             font-size: 20px;
             font-weight: bold;
           }
           & > .icon{
-            width: 80px;
+            transform: scale(1.5)
           }
         }
       }
       .icon {
         @extend %animate;
-        width: 60px;
+        width: 50px;
         background-color: rgb(255 255 255 / 25%);
         padding: 10px;
         box-sizing: content-box;
@@ -73,9 +72,9 @@
       }
       .title {
         @extend %animate;
-        transform: translateY(10px);
         color: #fff;
         font-size: 14px;
+        margin-top: 10px;
       }
     }
   }
