@@ -5,6 +5,11 @@ on:
     branches:
       - "master"
 
+env:
+  APP_LOCATION: "/"
+  APP_VERSION: "latest"
+  APP_NAME: "Docker"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,16 +23,23 @@ jobs:
         id: buildx
         uses: docker/setup-buildx-action@v1
 
-      # 编译并推送镜像到阿里云
-      - name: Build the Docker image
-        run: |
-          docker version
-          # 登录阿里云镜像仓库
-          docker login --username=${{ secrets.DOCKER_USERNAME_ALIYUN }} --password=${{ secrets.DOCKER_PASSWORD_ALIYUN }} registry.cn-hangzhou.aliyuncs.com
-          # 使用Dockerfile构建镜像
-          docker build --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/ffget_dev/navigator-web:beta
-          # 推送镜像到镜像仓库
-          docker push registry.cn-hangzhou.aliyuncs.com/ffget_dev/navigator-web:beta
+        # 登录到阿里云容器镜像服务
+      - name: Login to Ali Docker
+        uses: docker/login-action@v1
+        # 配置登录信息，secrets 变量在 github settings -> secrets 中设置
+        with:
+          registry: ${{ secrets.ALI_DOCKER_HUB_REGISTRY }}
+          username: ${{ secrets.ALI_DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.ALI_DOCKER_HUB_PASSWORD }}
+
+      # 构建镜像并上传到阿里云容器镜像仓库
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.ALI_DOCKER_HUB_REGISTRY_STORE }}:${{ env.APP_VERSION }}
 
       # 打印 docker 镜像 SHA256 Hash 值
       - name: Image digest
