@@ -28,9 +28,9 @@ jobs:
         uses: docker/login-action@v1
         # 配置登录信息，secrets 变量在 github settings -> secrets 中设置
         with:
-          registry: ${{ secrets.ALI_DOCKER_HUB_REGISTRY }}
-          username: ${{ secrets.ALI_DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.ALI_DOCKER_HUB_PASSWORD }}
+          registry: ${{ secrets.ALIYUN_DOCKER_HUB_REGISTRY }}
+          username: ${{ secrets.ALIYUN_DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.ALIYUN_DOCKER_HUB_PASSWORD }}
 
       # 构建镜像并上传到阿里云容器镜像仓库
       - name: Build and push
@@ -39,7 +39,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.ALI_DOCKER_HUB_REGISTRY_STORE }}:${{ env.APP_VERSION }}
+          tags: ${{ secrets.ALIYUN_DOCKER_HUB_REGISTRY_STORE }}:${{ env.APP_VERSION }}
 
       # 打印 docker 镜像 SHA256 Hash 值
       - name: Image digest
