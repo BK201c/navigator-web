@@ -25,7 +25,7 @@ jobs:
           # 登录阿里云镜像仓库
           docker login --username=${{ secrets.DOCKER_USERNAME_ALIYUN }} --password=${{ secrets.DOCKER_PASSWORD_ALIYUN }} registry.cn-hangzhou.aliyuncs.com
           # 使用Dockerfile构建镜像
-          docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/ffget_dev/navigator-web:beta
+          docker build --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/ffget_dev/navigator-web:beta
           # 推送镜像到镜像仓库
           docker push registry.cn-hangzhou.aliyuncs.com/ffget_dev/navigator-web:beta
 
