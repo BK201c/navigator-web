@@ -6,7 +6,7 @@ on:
       - "master"
 
 env:
-  APP_LOCATION: "/"
+  APP_LOCATION: "."
   APP_VERSION: "latest"
   APP_NAME: "Docker"
 
@@ -15,10 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 检出当前代码（触发工作流时的commits）
       - name: Check Out
         uses: actions/checkout@v2
 
-      # 设置 docker 环境
+      # setup-buildxaction 将默认使用docker-container 构建器驱动程序创建和引导构建器。非必需
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v1
@@ -37,7 +38,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ${{ env.APP_LOCATION }}
           push: true
           tags: ${{ secrets.ALIYUN_DOCKER_HUB_REGISTRY_STORE }}:${{ env.APP_VERSION }}
 
